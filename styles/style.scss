@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+//variables
+$textColor: #000;
+$backgroundColor: rgb(255, 255, 255);
+$fontFamily: 'Roboto', sans-serif;
+$feature_proj_branding: branding;
+$feature_proj_comingsoon: comingsoon;
+$feature_proj_drawing: drawing;
+$feature_proj_photography: photography;
+$feature_proj_fashion: fashion;
+$feature_proj_web: web;
+$feature_proj_prints: prints;
+$feature_proj_misc: misc;
+$feature_proj_shoppingCart: shoppingCart;
+$drawing1: drawing1;
+$drawing2: drawing2;
+$drawing3: drawing3;
+$drawing4: drawing4;
+$tuscan: tuscan;
+$sedona: sedona;
+$gCV: grandCanyonVillage;
+$sF: sanFrancisco;
+
+$print1: print1;
+$print2: print2;
+$print3: print3;
+$print4: print4;
+$print5: print5;
+$print6: print6;
+$print7: print7;
+$print8: print8;
+
+$about-img: about-img;
+$about: about;
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+
+body {
+  font-family: $fontFamily;
+  background-color: $backgroundColor;
+  color: $textColor;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ // background-color: red;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100vw;
+}
+
+.header-container {
+  margin-top: 1%;
+}
+
+.logo {
+  width: 5em;
+  margin-left: 40%;
+}
+
+.header-header-text {
+  font-size: 4rem;
+  margin: 0;
+  padding: .5rem;
+
+}
+
+.header-nav-bar ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
+.header-nav-bar li{
+  float: left;
+  position: relative;
+}
+
+.header-nav-bar li > a {
+  text-decoration: none;
+  color: black
+}
+
+.header-nav-bar li > a:visited {
+  text-decoration: none;
+  color: black
+}
+
+.header-nav-bar li:not(:last-child) {
+border-right: .001rem solid gray;
+padding-right: 10%;
+
+}
+
+.header-nav-bar li > a:visited {
+  color: black;
+}
+
+.header-nav-bar li > a:hover {
+  opacity: 0.7;
+}
+
+// Main Section
+
+.tuscan {
+  grid-area: $tuscan;
+}
+.sedona {
+  grid-area: $sedona;
+}
+
+.grandCanyonVillage {
+  grid-area: $gCV;
+}
+
+.sanFrancisco {
+  grid-area: $sF;
+}
+
+
+.branding{
+ // background-color: red;
+  grid-area: $feature_proj_branding;
+}
+.comingsoon{
+ // background-color: skyblue;
+  grid-area: $feature_proj_comingsoon;
+}
+.photography{
+  //background-color: orange;
+  grid-area: $feature_proj_photography;
+}
+.fashion{
+ // background-color: purple;
+  grid-area: $feature_proj_fashion;
+}
+.web{
+  //background-color: yellow;
+  grid-area: $feature_proj_web;
+}
+.drawing{
+  //background-color: green;
+  grid-area: $feature_proj_drawing;
+}
+.prints{
+  //background-color: green;
+  grid-area: $feature_proj_prints;
+}
+
+.misc {
+  grid-area: $feature_proj_misc;
+}
+.shoppingCart {
+  grid-area: $feature_proj_shoppingCart;
+}
+
+.drawing1 {
+  grid-area: $drawing1;
+}
+
+.drawing2 {
+  grid-area: $drawing2;
+}
+
+.drawing3 {
+  grid-area: $drawing3;
+}
+
+.drawing4 {
+  grid-area: $drawing4;
+}
+
+.print1 {
+  grid-area: $print1;
+}
+.print2 {
+  grid-area: $print2;
+}
+.print3 {
+  grid-area: $print3;
+}
+.print4 {
+  grid-area: $print4;
+}
+.print5 {
+  grid-area: $print5;
+}
+.print6 {
+  grid-area: $print6;
+}
+.print7 {
+  grid-area: $print7;
+}
+.print8 {
+  grid-area: $print8;
+}
+
+.about-img {
+  grid-area: $about-img;
+}
+
+.about {
+  grid-area: $about;
+}
+#main {
+ // background-color: hotpink ;
+  margin-top: 2%;
+  display: grid;
+  width: 100vw;
+  height: 60vh;
+  grid-template-areas:
+  "branding comingsoon web"
+   "drawing photography fashion";
+   justify-content: center;
+   column-gap: 5%;
+
+}
+
+
+#main-shop {
+  // background-color: hotpink ;
+   margin-top: 2%;
+   display: grid;
+   width: 100vw;
+   height: 60vh;
+   grid-template-areas:
+   ". shoppingCart ."
+   "prints fashion misc";
+    justify-content: center;
+    column-gap: 5%;
+
+ }
+ #main-photoMain {
+  // background-color: hotpink ;
+   margin-top: 2%;
+   display: grid;
+   width: 100vw;
+   height: 60vh;
+   grid-template-areas:
+   "tuscan sedona"
+   "grandCanyonVillage sanFrancisco";
+    justify-content: center;
+    column-gap: 5%;
+
+ }
+
+ .shoppingCart {
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+ }
+
+ .shoppingCart > p {
+   font-size: 2rem;
+ }
+
+
+
+
+#main-comingsoon, #main-branding, #main-web, #main-waterPollution, #main-about{
+  height: 60vh;
+  margin-top: 2%;
+  display: grid;
+justify-content: center;
+  column-gap: 5%;
+  //this NEEDS FIXING
+ // background-color: red;
+}
+
+#main-about {
+  display: grid;
+  margin-bottom: 2rem;
+  height: 70vh;
+  justify-content: center;
+  align-self: center;
+
+}
+
+#main-drawing {
+  margin-top: 2%;
+  display: grid;
+  width: 100vw;
+  height: 60vh;
+  grid-template-areas:
+  "drawing1 drawing2"
+   "drawing3 drawing4";
+   justify-content: center;
+   column-gap: 5%;
+}
+
+#main-prints {
+  margin-top: 2%;
+  display: grid;
+  width: 100vw;
+  height: 60vh;
+  grid-template-areas:
+  "print1 print2 print3 print4"
+   "print5 print6 print7 print8";
+   justify-content: center;
+   column-gap: 5%;
+}
+
+.about-img {
+  width: 30rem;
+  grid-column: 2;
+  grid-row: 1/4;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .1em .1em .5em .05em;
+
+}
+
+.about {
+ // background-color: blue;
+  grid-column: 3;
+  grid-row: 1/3;
+  width:20vw;
+}
+
+.contact {
+ // background-color: green;
+  grid-column: 3;
+  grid-row: 3/4;
+  width: 30%;
+  font-size: 1rem;
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  opacity: 0.7;
+}
+
+
+#main-waterPollution{
+  grid:flex;
+  flex-direction: column;
+  grid-template-areas:
+  "wPollution1"
+  "wPollution2";
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.waterPollution-text {
+  //background-color: red;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.waterPollution-img {
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+
+}
+
+.waterPollution-img > img {
+  width:50%;
+ height:40;
+
+}
+
+
+#main-comingsoon > img {
+  margin-top: 40%;
+}
+
+.main-web-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-web-container a > img{
+  width:20rem;
+  height:30vh;
+  margin-left: 1em;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .1em .1em .1em .05em;
+
+}
+
+.web-container{
+align-items: flex-start;}
+
+#main-web a:hover{
+
+  opacity: .60;
+}
+
+#main-shop a:not(:hover){
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: .75;
+}
+#main-photoMain a:not(:hover){
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: .75;
+}
+
+#main-prints a:not(:hover){
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: .75;
+}
+
+#main-drawing a:not(:hover){
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: .75;
+}
+
+#main a:not(:hover){
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: .75;
+}
+
+
+#main-shop a > img {
+  width: 12rem;
+  border-radius: 70%;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .2rem .2em .2em .01em;
+  margin-bottom: 1em;
+}
+
+#main-photoMain a > img {
+  width: 17rem;
+  height: 15rem;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .2rem .2em .2em .01em;
+}
+
+#main-prints a > img {
+  height: 15rem;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .2rem .2em .2em .01em;
+}
+
+#main a > img {
+  width: 12rem;
+  border-radius: 70%;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .2rem .2em .2em .01em;
+  margin-bottom: 1em;
+}
+
+#main-drawing a > img {
+  width: 17rem;
+  box-shadow: rgba(0.2,0.3,0.5,0.5) .2rem .2em .2em .01em;
+
+}
+
+#main-shop a > p {
+  font-size: 1rem;
+}
+#main a > p {
+  font-size: 1rem;
+}
+
+#main-shop a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+#main-prints a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+#main-prints p:not(:last-child) {
+  margin-top: 10px;
+}
+
+#main a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+#footer ul {
+  list-style-type: none;
+
+}
+
+.footer-container a {
+  text-decoration: none;
+  color:black;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  overflow: hidden;
+
+}
+
+.footer-container {
+ width: 100%;
+ margin-bottom: 2%;
+}
+
+ .footer-container li:not(:last-child) {
+  border-right: .001rem solid gray;
+  padding-right: 1em;
+
+  }
+
+  .footer-container li:not(:first-child) {
+    padding-left: 1rem;
+
+    }
+
+  .footer-container li{
+    float: left;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .footer-container a:hover {
+    opacity: .5;
+  }
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(218, 218, 218, 0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .modal-content {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  /* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #1f1e1e;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(44, 43, 43);
+  text-decoration: none;
+  cursor: pointer;
+}
